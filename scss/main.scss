@@ -46,7 +46,6 @@ header {
       height: 100vh;
       padding: 30px;
       padding-top: 100px;
-      right: 0px;
       background: #ededed;
       z-index: 2;
 
@@ -121,22 +120,50 @@ header {
 // ----------- SECTION HOME --------
 
 #home {
-  margin: 0 auto;
+  padding-top: 70px;
+
   .center {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: calc(100vh - 70px);
-    padding-bottom: 30px;
     img {
       width: 100%;
       margin: 0 auto;
     }
 
-    h1, h2, p {
-      margin: 0 30px;
-      font-family: 'Montserrat', sans-serif;
-      text-align: center;
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+      h1, h3, p {
+        margin: 0 30px;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+      }
+      span {
+        font-size: 0.5em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #home {
+    .center {
+      display: flex;
+      flex-direction: row;
+
+      img {
+        width: 50%;
+        height: auto;
+        margin: auto;
+      }
+      .text {
+        width: 50%;
+        font-size: 1.5em;
+      }
     }
   }
 }
@@ -144,24 +171,60 @@ header {
 // ------------ SECTION ABOUT ---------
 
 #about {
+  padding-top: 70px;
+
   .center {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: calc(100vh - 70px);
-    padding-bottom: 30px;
 
     img {
       width: 100%;
       margin: 0 auto;
     }
-    h1 {
-      font-family: 'Montserrat', sans-serif;
-      text-align: center;
-    }
-    p {
-      font-family: 'Montserrat', sans-serif;
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+      }
+      p {
+        font-family: 'Montserrat', sans-serif;
 
+      }
+    }
+    #about__virus2 {
+      display: none;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  #about {
+    .center {
+      display: flex;
+      flex-direction: row-reverse;
+
+      img {
+        width: 50%;
+        height: auto;
+      }
+      .text {
+        width: 50%;
+        font-size: 1.5em;
+      }
+
+      #about__virus1 {
+        display: none;
+      }
+      #about__virus2 {
+        display: block;
+      }
     }
   }
 }
@@ -169,12 +232,13 @@ header {
 // ------------ SECTION CONTACT ----------
 
 #contact {
+  padding-top: 70px;
+
   .center {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: calc(100vh - 70px);
-    padding-bottom: 30px;
 
 
     //img {
@@ -183,25 +247,64 @@ header {
     iframe {
       margin: 30px auto;
     }
-    h2, h3{
+    h2 {
       font-family: 'Montserrat', sans-serif;
       text-align: center;
     }
-    p {
-      font-family: 'Montserrat', sans-serif;
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+      h3:first-child {
+        display: none;
+      }
+      h3{
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+      }
+      p {
+        font-family: 'Montserrat', sans-serif;
 
+      }
     }
   }
 }
 
+
+@media only screen and (min-width: 768px) {
+  #contact {
+    .center {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      h2 {
+        display: none;
+      }
+      .text {
+        width: 50%;
+        font-size: 1.5em;
+
+        h3:first-child {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+
 //----------------- SECTION ACTION ------------
 #action {
+  padding-top: 70px;
+
   .center {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: calc(100vh - 70px);
-    padding-bottom: 30px;
 
     iframe {
       margin: 0 auto;
@@ -212,7 +315,7 @@ header {
     }
     p {
       font-family: 'Montserrat', sans-serif;
-
+      text-align: center;
     }
   }
 }

@@ -20,13 +20,37 @@ var links = document.querySelectorAll('.menu ul li a');
 links.forEach(function (link){
     link.addEventListener('click', function () {
         menu.classList.remove('active');
+
     });
 });
 
 
-// $( document ).ready(function() {
-//
-// });
+$( document ).ready(function() {
+    $("a[href$='#home']").click(function() {
+        $('html,body').animate({
+                scrollTop: $("#home").offset().top},
+            'slow');
+    });
+
+    $("a[href$='#about']").click(function() {
+        $('html,body').animate({
+                scrollTop: $("#about").offset().top},
+            'slow');
+    });
+
+    $("a[href$='#contact']").click(function() {
+        $('html,body').animate({
+                scrollTop: $("#contact").offset().top},
+            'slow');
+    });
+
+    $("a[href$='#action']").click(function() {
+        $('html,body').animate({
+                scrollTop: $("#action").offset().top},
+            'slow');
+    });
+
+});
 
 
 
